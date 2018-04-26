@@ -3,11 +3,13 @@ describe('the random number guess game', function(){
 
     beforeEach(function(){
         randomNumber = 10;
-        randomize = function(){ return randomNumber };
+				randomize = randomNumber;
+        // randomize = function(){ return randomNumber };
         app = getApplication(randomize);
     });
 
     it('compares numbers', function(){
+				console.log(randomize);
         expect(app.compareNumbers(10, 20)).toEqual(app.smaller());
         expect(app.compareNumbers(20, 10)).toEqual(app.bigger());
         expect(app.compareNumbers(10, 10)).toEqual(app.win());

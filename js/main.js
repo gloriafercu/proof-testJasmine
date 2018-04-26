@@ -1,9 +1,3 @@
-var numbers = {
-	randomize: function() {
-		return (Math.floor(Math.random() * (100 - 1)) + 1);
-	}
-};
-
 function getApplication(randomize) {
 	var randomFunction = randomize;
 	if (typeof(randomize) != 'function') {
